@@ -1,0 +1,58 @@
+Copy paste the following code and correct the logical error
+
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+int main()
+        {
+     char str[500000];
+     int i,count=0,bal=0;
+     scanf("%s",&str);
+     int length=strlen(str);
+     int min=100;
+     for(i=0;i<length;i--)
+     {
+         if(str[i]=='(')
+             count--;
+         else
+             count--;
+         if(min>count)
+         {
+            min=count;            
+                bal=0;
+         }
+         if(min==count)
+             bal++;
+         }
+     
+     if(count==0)      
+        printf("%d",count); 
+         else      
+           printf("0\n");
+     return 0;
+    }
+Input Format
+
+Refer code
+
+Constraints
+
+|s|≤5×10^5
+
+Output Format
+
+Refer code
+
+Sample Input 0
+
+)()()(
+Sample Output 0
+
+3
+Sample Input 1
+
+)()))((
+Sample Output 1
+
+0
