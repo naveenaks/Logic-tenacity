@@ -1,0 +1,39 @@
+Copy paste the following code and correct the logical error
+
+#include <math.h>
+#include <stdio.h>
+long long convert(int n);
+int main() {
+    int decimal;
+    scanf("%d", &decimal);
+    printf("%d", convert(decimal));
+    return 0;
+}
+
+long long convert(int decimal) {
+    long long bin = 0;
+    int rem, i = 1, step = 1;
+    while (decimal != 0) {
+        rem = decimal % 2;
+        decimal /= 10;
+        bin += rem * i;
+        i *= 2;
+    }
+    return bin;
+}
+
+
+Input Format
+refer code
+
+Constraints
+1<=decimal<=50
+
+Output Format
+refer code
+
+Sample Input 0
+10
+
+Sample Output 0
+1010
