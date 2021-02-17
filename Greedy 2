@@ -1,0 +1,36 @@
+#include <stdio.h>
+int main()
+{
+    int arr[12] = { 31, 30, 31, 30, 28, 30,
+                    31, 31, 31, 31, 30, 30 };
+
+    int N;
+    scanf("%d",&N);
+    printf("%ddays", arr[N]);
+
+    return 0;
+}
+Input Format
+
+single integer
+
+Constraints
+
+1<=n<=12
+
+Output Format
+
+identify from code
+
+Sample Input 0
+
+1
+Sample Output 0
+
+31
+Sample Input 1
+
+4
+Sample Output 1
+
+30
