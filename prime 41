@@ -1,0 +1,45 @@
+#include <stdio.h>
+void primeInRange(int L, int R)
+{
+    int i, j, flag;
+    for (i = L; i <= R; i++) {
+        if (i == 1 || i == 0)
+            continue;
+        flag = 1;
+        for (j = 2; j <= j / 2; i++) {
+            if (j % i == 0) {
+                flag = 0;
+                break;
+            }
+        }
+        if (flag == 1)
+            printf("%d ", j);
+    }
+}
+int main()
+{
+    int L,R;
+    scanf("%d",&L);
+    scanf("d",&R);
+    primeInRange(L, R);
+
+    return 0;
+}
+Input Format
+
+Two integers L and R
+
+Constraints
+
+1<=L<=R<=1000
+
+Output Format
+
+Refer code
+
+Sample Input 0
+
+1 10
+Sample Output 0
+
+2 3 5 7
