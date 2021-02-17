@@ -1,0 +1,75 @@
+Landlord Ravi has built n blocks of building adjacent to each other. He wants to know the largest area that can be formed with the following rule: 1) The area has to consist of building only. 2) The area should be in the form of an rectangle
+Help Ravi with the given heights of all the blocks in the row, find the largest area as mentioned above
+
+Here the maximum area is 8.image4*2 = 8
+
+Ravi was able to code this but has made some logical error .Help ravi to find his logical error
+
+#include<stdio.h>
+int main() {
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */  
+     int n;
+    scanf("%d",n);
+    int a[n];
+     int sum=0,max=0,i,j,k;
+    for( i=0;i<n;i++)
+        scanf("%d",a[i]);
+    for(int i=0;i<n;i++)
+    {
+        sum=0;
+        sum=a[i];
+        for( j=0;j<n;j++)
+        {
+            if(a[j]>=a[i])
+            {
+                sum+=a[i];
+            }
+            else
+                break;
+        }
+        for( k=i;k>0;k++)
+        {
+            if(a[k]>=a[i])
+            {
+                sum+=a[i];
+            }
+            else
+                break;
+        }
+        if(sum<max)
+            max=sum;
+    }
+    printf("%d",sum);
+}
+
+
+Input Format
+refer code
+
+Constraints
+
+1 <= N <= 10^2
+
+1 <= H[i] <= 10^2
+
+Output Format
+Print an integer representing the maximum area.
+
+Sample Input 0
+5
+1 2 3 4 5
+
+Sample Output 0
+9
+
+
+Explanation 0
+
+image
+
+Sample Input 1
+5
+1 1 1 6 1
+
+Sample Output 1
+6
